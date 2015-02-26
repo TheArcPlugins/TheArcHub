@@ -1,5 +1,7 @@
 package net.thearc.hub.cosmetics;
 
-public class Hats {
+import org.bukkit.event.Listener;
+
+public class Hats implements Listener {
 
 }
