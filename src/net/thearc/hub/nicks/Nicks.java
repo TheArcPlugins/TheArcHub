@@ -1,6 +1,8 @@
 
 package net.thearc.hub.nicks;
 
+import net.thearc.hub.main.Main;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -9,6 +11,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class Nicks implements CommandExecutor {
+	
+	Main plugin;
+	public Nicks(Main plugin) {
+		this.plugin = plugin;
+	}
+	
 	
 	@SuppressWarnings("deprecation")
 	@Override
@@ -25,7 +33,7 @@ public class Nicks implements CommandExecutor {
 			String nick = new String(args[1]);
 			String nickcolor = ChatColor.translateAlternateColorCodes('&', nick);
 			String sendername = sender.getName();
-			for(String s : ArcNicks.config.getStringList("restrictednicks"))
+			for(String s : Main.config.getStringList("restrictednicks"))
 					{
 					if(ChatColor.stripColor(nick).contains(s))
 					{
