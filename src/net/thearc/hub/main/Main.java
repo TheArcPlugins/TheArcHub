@@ -15,7 +15,6 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		version = 0.1;
 		rights = "Created by ItzQuiver, owned by TheArc.";
-		System.out.println("Oon was here.");
 	}
 
 }
