@@ -1,5 +1,5 @@
 package net.thearc.hub.cosmetics;
 
-public class Hats {
+public class Compass {
 
 }
